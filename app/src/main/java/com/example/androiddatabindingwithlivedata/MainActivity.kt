@@ -19,14 +19,25 @@ class MainActivity : AppCompatActivity() {
         mainviewmodel = ViewModelProvider(this).get(Mainviewmodel::class.java)
 
 
-        mainviewmodel.livedatas.observe(this, Observer {
-            binding.newtextid.text = it
-        })
 
-        binding.newbtnid.setOnClickListener{
-            mainviewmodel.updatedViewmodeldata()
-            println("check text here"+binding.newbtnid.text)
-        }
+        //        binding.newbtnid.setOnClickListener{
+//            mainviewmodel.updatedViewmodeldata()
+//            println("check text here"+binding.newbtnid.text)
+//        }
+
+
+        //handleing in view design onclick
+
+        binding.maindata = mainviewmodel
+        //this text sets from view designs
+        binding.lifecycleOwner = this
+
+//        mainviewmodel.livedatas.observe(this, Observer {
+//            binding.newtextid.text = it
+//        })
+
+
+
 
     }
 }

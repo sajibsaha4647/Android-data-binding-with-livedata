@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel
 
 class Mainviewmodel:ViewModel() {
 
-    val livedatas = MutableLiveData("this is first sets data")
+    val livedatas = MutableLiveData("")
 
     fun updatedViewmodeldata(){
         livedatas.value = "this text hasbeen changes !"
